@@ -42,10 +42,7 @@
     @include adaptiveValue('width', 70, 50);
     @include adaptiveValue('height', 70, 50);
 
-    border-radius: 20px;
     @include adaptiveValue('border-radius', 20, 15);
-    background-color: #24272c;
-    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.25) inset;
   }
 
   &__text {
@@ -64,10 +61,6 @@
     font-size: 20px;
     @include adaptiveValue('font-size', 20, 16);
 
-    border-radius: 15px;
-    background-color: #24272c;
-    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.25) inset;
-
     @media (max-width: $tablet) {
       max-width: 100%;
     }
@@ -83,9 +76,5 @@
 
     font-size: 20px;
     @include adaptiveValue('font-size', 20, 16);
-
-    border-radius: 15px;
-    background-color: #24272c;
-    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.25) inset;
   }
 }
