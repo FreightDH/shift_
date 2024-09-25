@@ -2,4 +2,36 @@
 @import 'base/forms/forms';
 
 // Общие стили
+.blur {
+  position: fixed;
+  z-index: 5;
+  width: 350px;
+  height: 350px;
+  @include adaptiveValue('width', 350, 250);
+  @include adaptiveValue('height', 350, 250);
 
+  opacity: 0.45;
+
+  border-radius: 32px;
+  filter: blur(600px);
+
+  @media (max-width: $mobileSmall) {
+    filter: blur(300px);
+  }
+
+  &.blur--red {
+    background-color: #db2777;
+
+    @media (max-width: $mobileSmall) {
+      opacity: 0.8;
+    }
+  }
+
+  &.blur--green {
+    background-color: #4aff2d;
+
+    @media (max-width: $mobileSmall) {
+      opacity: 0.3;
+    }
+  }
+}
