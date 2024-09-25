@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { "title":"Шифт_ - быстрый и уверенный вход в IT", "css":
+  "../../css/style.min.css" })
+
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html',{})
+      <div class="application__red blur blur--red"></div>
+      <div class="application__green blur blur--green"></div>
+      <main class="page">
+        <section class="application">
+          <div class="application__container">
+            <div class="application__body">
+              <div class="application__content">
+                <div class="application__square bg__grey"></div>
+                <h1 class="application__title">Подача заявления</h1>
+                <h2 class="application__subtitle">
+                  Оставьте Ваш телеграм, и мы сами Вам напишем и про все расскажем
+                </h2>
+                <div class="application__controls">
+                  <input autocomplete="off" type="text" placeholder="Ваш телеграм" class="input" />
+                  <button type="submit" class="application__btn btn">
+                    <span>Подать заявку</span>
+                    <img src="../../@img/icons/arrow.svg" alt="arrow-icon" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/footer.html',{})
+    </div>
+    <script src="../../js/app.min.js"></script>
+  </body>
+</html>
