@@ -1,2 +1,161 @@
 .header {
+  padding: 20px 0;
+
+  &__body {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    @media (max-width: $mobile) {
+      gap: 0;
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__logo {
+    font-family: 'Montserrat Alternates';
+    font-size: 30px;
+    @include adaptiveValue('font-size', 30, 24);
+    font-weight: 700;
+  }
+}
+.menu {
+  &__icon {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    @include adaptiveValue('top', 30, 25);
+    width: toRem(30);
+    height: toRem(22);
+    cursor: pointer;
+    z-index: 5;
+
+    span {
+      transition: all 0.3s ease 0s;
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+
+      &:first-child {
+        top: 0px;
+      }
+
+      &:last-child {
+        top: auto;
+        bottom: 0px;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      display: block;
+    }
+
+    .menu-open & {
+      span {
+        transform: scale(0);
+        background-color: #979797;
+
+        &:first-child {
+          transform: rotate(45deg);
+          top: 5px;
+        }
+
+        &:last-child {
+          transform: rotate(-45deg);
+          top: 5px;
+        }
+      }
+    }
+  }
+
+  &__body {
+    @media (max-width: $mobile) {
+      position: fixed;
+      width: 45%;
+      height: 100%;
+      top: 0;
+      left: -110%;
+      background-color: #24272c;
+      z-index: 2;
+      padding: 70px 10px 20px 15px;
+      overflow: auto;
+      transition: all 0.3s ease 0s;
+
+      &.menu-open {
+        left: 0;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      align-items: start;
+      gap: 10px;
+    }
+  }
+
+  &__item {
+    @media (max-width: $mobile) {
+      &:nth-child(1) {
+        order: 0;
+      }
+      &:nth-child(2) {
+        order: 3;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    position: relative;
+
+    color: #979797;
+    font-size: 20px;
+    @include adaptiveValue('font-size', 20, 16);
+
+    span {
+      position: relative;
+      line-height: 28px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -2px;
+        width: 0;
+        height: 2px;
+        background-color: #fff;
+        transition: all 0.2s ease 0s;
+      }
+    }
+
+    &:hover {
+      color: #fff;
+
+      span::after {
+        left: 0;
+        width: 100%;
+      }
+    }
+
+    &.active {
+      span::after {
+        left: 0;
+        width: 100%;
+        background-color: #979797;
+      }
+
+      &:hover {
+        color: #979797;
+      }
+    }
+  }
 }

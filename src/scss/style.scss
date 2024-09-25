@@ -6,13 +6,14 @@
 
 //<ШРИФТЫ>
 //<Подключаем шрифты>
+@import url(https://fonts.googleapis.com/css?family=Montserrat+Alternates:regular,700);
 @import 'fonts/fonts';
 //</Подключаем шрифты>
 
 //<Шрифт по умолчанию>
 $fontFamily: 'GoshaSans', sans-serif;
 $fontSize: toRem(16);
-$mainColor: #000;
+$mainColor: #fff;
 //</Шрифт по умолчанию>
 //</ШРИФТЫ>
 
@@ -34,14 +35,10 @@ $pc: toEm($containerWidth); // ПК, ноутбуки, некоторые пла
 $tablet: toEm(991.98); // Планшеты, некоторые телефоны в горизонтальном положении
 $mobile: toEm(767.98); // Телефоны L
 $mobileSmall: toEm(479.98); // Телефоны S
-
-// Тип адаптива
-// 1 = отзывчивость (у контейнера нет брейкпоинтов),
-// 2 = по брейк-поинтам (контейнер меняет свою ширину по брейк-поинтам)
-$responsiveType: 1;
 //</ПЕРЕМЕННЫЕ>
 
 //<КОНТЕЙНЕР>
+
 // Отзывчивая
 [class*='__container'] {
   @if ($maxWidthContainer > 0) {
@@ -74,6 +71,8 @@ body {
 .wrapper {
   width: 100%;
   min-height: 100%;
+
+  background-color: #19191b;
   // Прижимаем footer
   display: flex;
   flex-direction: column;
