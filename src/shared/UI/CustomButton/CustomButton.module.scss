@@ -3,10 +3,14 @@
 .btn {
   display: inline-block;
   max-width: 400px;
+  @include adaptiveValue('max-width', 400, 200);
 
   padding: 10px 15px;
+  @include adaptiveValue('padding-left', 15, 10);
+  @include adaptiveValue('padding-right', 15, 10);
 
   font-size: 20px;
+  @include adaptiveValue('font-size', 20, 16);
   text-align: center;
 
   background-color: #5f2eea;
@@ -19,6 +23,8 @@
   img {
     width: 50px;
     height: 20px;
+    @include adaptiveValue('width', 50, 35);
+    @include adaptiveValue('height', 20, 15);
     object-fit: cover;
   }
 }
