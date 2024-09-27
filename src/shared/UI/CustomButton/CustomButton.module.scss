@@ -1,0 +1,24 @@
+@import '@/app/styles';
+
+.btn {
+  display: inline-block;
+  max-width: 400px;
+
+  padding: 10px 15px;
+
+  font-size: 20px;
+  text-align: center;
+
+  background-color: #5f2eea;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  img {
+    width: 50px;
+    height: 20px;
+    object-fit: cover;
+  }
+}

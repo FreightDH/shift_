@@ -1,0 +1,56 @@
+@import '@/app/styles';
+
+.application {
+  padding: 50px 0px;
+  @include adaptiveValue('padding-top', 50, 25);
+  @include adaptiveValue('padding-bottom', 50, 25);
+
+  &__red {
+    top: 25%;
+    left: 10%;
+
+    @media (max-width: $mobileSmall) {
+      top: 10%;
+      left: 10%;
+    }
+  }
+
+  &__green {
+    bottom: 0;
+    right: 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+  &__square {
+    align-self: start;
+  }
+
+  &__titles {
+    padding: 80px 0px 0px 0px;
+  }
+
+  &__title {
+    font-size: 50px;
+    text-align: center;
+  }
+
+  &__subtitle {
+    max-width: 800px;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  &__controls {
+    padding: 30px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}

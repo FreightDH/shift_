@@ -1,0 +1,22 @@
+@import '@/app/styles';
+
+.header {
+  padding: 20px 0;
+
+  &__body {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    @media (max-width: $mobile) {
+      gap: 0;
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__logo {
+    font-family: 'Montserrat Alternates';
+    font-size: 30px;
+    @include adaptiveValue('font-size', 30, 24);
+    font-weight: 700;
+  }
+}

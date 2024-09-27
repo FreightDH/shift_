@@ -1,0 +1,24 @@
+@import '@/app/styles';
+
+.footer {
+  padding: 15px 0;
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    @include adaptiveValue('gap', 50, 20);
+  }
+
+  &__logo {
+    font-family: 'Montserrat Alternates';
+    font-size: 24px;
+    @include adaptiveValue('font-size', 24, 18);
+    font-weight: 700;
+  }
+
+  &__copyright {
+    @include adaptiveValue('font-size', 16, 10);
+  }
+}
