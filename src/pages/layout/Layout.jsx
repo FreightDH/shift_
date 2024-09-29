@@ -25,7 +25,7 @@ export const BlurLayout = () => {
       <div className={cn(cl.page__green, {}, ['blur', 'blur--green'])}></div>
       <main className={cl.page}>
         <section className={cl.section}>
-          <div className="section__container">
+          <div className="section__container" style={{ minHeight: '100%' }}>
             <Outlet />
           </div>
         </section>

@@ -1,7 +1,7 @@
 // Общие стили
 .blur {
   position: fixed;
-  z-index: 5;
+  z-index: 2;
   width: 350px;
   height: 350px;
   @include adaptiveValue('width', 350, 250);

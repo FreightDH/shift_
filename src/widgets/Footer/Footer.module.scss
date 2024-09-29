@@ -19,6 +19,6 @@
   }
 
   &__copyright {
-    @include adaptiveValue('font-size', 16, 10);
+    @include adaptiveValue('font-size', 16, 8);
   }
 }

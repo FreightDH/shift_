@@ -18,12 +18,12 @@
 
   &__title {
     font-size: 50px;
-    @include adaptiveValue('font-size', 50, 30);
+    @include adaptiveValue('font-size', 50, 28);
     text-align: center;
   }
 
   &__subtitle {
-    @include adaptiveValue('padding-top', 0, 10);
+    @include adaptiveValue('padding-top', 5, 10);
     max-width: 800px;
     font-size: 24px;
     @include adaptiveValue('font-size', 24, 16);

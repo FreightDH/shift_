@@ -5,11 +5,11 @@
 //</МИКСИНЫ>
 
 //<ШРИФТЫ>
-// @import 'base/fonts';
-@import url(https://fonts.googleapis.com/css?family=Montserrat+Alternates:regular,700);
+@import 'base/fonts';
+@import url(https://fonts.googleapis.com/css?family=Montserrat+Alternates:regular,500,700);
 
 // Параметры по умолчанию
-$fontFamily: 'GoshaSans', sans-serif;
+$fontFamily: 'Montserrat Alternates', sans-serif;
 $fontSize: toRem(16);
 $mainColor: #fff;
 //</ШРИФТЫ>
@@ -73,7 +73,7 @@ body {
   display: flex;
   flex-direction: column;
   > main {
-    flex: 1 1 auto;
+    flex: 1 1 100%;
   }
 }
 //</ОБОЛОЧКА>

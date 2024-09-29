@@ -37,8 +37,10 @@ export const BurgerMenu = () => {
           </li>
           <li className={cl.menu__item}>
             <Link
-              className={cn(cl.menu__link, { [cl.active]: pathname === '/application' })}
               to="/application"
+              className={cn(cl.menu__link, {
+                [cl.active]: ['/application', '/application/success'].includes(pathname),
+              })}
             >
               <span>Подача заявления</span>
             </Link>

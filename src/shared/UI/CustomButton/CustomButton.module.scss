@@ -10,10 +10,12 @@
   @include adaptiveValue('padding-right', 15, 10);
 
   font-size: 20px;
-  @include adaptiveValue('font-size', 20, 16);
+  @include adaptiveValue('font-size', 20, 15);
   text-align: center;
+  font-weight: 500;
 
   background-color: #5f2eea;
+  transition: all 0.2s ease 0s;
 
   display: flex;
   justify-content: center;
@@ -26,5 +28,17 @@
     @include adaptiveValue('width', 50, 35);
     @include adaptiveValue('height', 20, 15);
     object-fit: cover;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: #4b22bc;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      background-color: #4b22bc;
+    }
   }
 }

@@ -21,7 +21,7 @@
     @include adaptiveValue('padding-top', 40, 20);
     @include adaptiveValue('padding-bottom', 40, 20);
     @include adaptiveValue('padding-right', 20, 10);
-    @include adaptiveValue('padding-left', 70, 35);
+    @include adaptiveValue('padding-left', 70, 25);
     max-width: 1300px;
     @include adaptiveValue('max-width', 1300, 290);
 
@@ -30,7 +30,7 @@
     gap: 15px;
 
     font-size: 20px;
-    @include adaptiveValue('font-size', 20, 16);
+    @include adaptiveValue('font-size', 20, 15);
 
     @media (max-width: $tablet) {
       max-width: 100%;
@@ -46,6 +46,6 @@
     @include adaptiveValue('padding-left', 25, 20);
 
     font-size: 20px;
-    @include adaptiveValue('font-size', 20, 16);
+    @include adaptiveValue('font-size', 20, 15);
   }
 }
