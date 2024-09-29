@@ -1,30 +1,9 @@
 @import '@/app/styles';
 
 .mission {
-  padding: 50px 0px;
-  @include adaptiveValue('padding-top', 50, 25);
-  @include adaptiveValue('padding-bottom', 50, 25);
-
-  &__red {
-    top: 25%;
-    left: 10%;
-
-    @media (max-width: $mobileSmall) {
-      top: 10%;
-      left: 10%;
-    }
-  }
-
-  &__green {
-    bottom: 0;
-    right: 0;
-  }
-
-  &__body {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 
   &__content {
     display: flex;
