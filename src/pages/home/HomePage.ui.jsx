@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 
 import { cn } from '@/shared/lib';
+import { CooperateBadge, StudyBadge } from '@/shared/UI/Badges';
 
-import { cooperate, study } from './assets';
 import cl from './HomePage.module.scss';
 
 export const HomePage = () => {
@@ -17,13 +17,11 @@ export const HomePage = () => {
         <div className={cn(cl.home__about, {}, ['bg__grey'])}>
           <p>Позволь нам рассказать про нас (не более 5 минут), но для начала выбери себя:</p>
           <div className={cl.home__choice}>
-            <Link className={cl.choice__item} to="">
-              <img alt="study-image" src={study} />
-              <span>Учиться</span>
+            <Link to="/study">
+              <StudyBadge />
             </Link>
-            <Link className={cl.choice__item} to="">
-              <img alt="cooperate-image" src={cooperate} />
-              <span>Сотрудничать</span>
+            <Link to="/cooperate">
+              <CooperateBadge />
             </Link>
           </div>
         </div>

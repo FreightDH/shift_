@@ -1,6 +1,6 @@
 import { HomePage } from './HomePage.ui';
 
 export const HomePageRoute = {
-  path: '/',
+  path: '/home',
   element: <HomePage />,
 };
