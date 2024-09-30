@@ -1,16 +1,33 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import { cn } from '@/shared/lib';
 import { CustomInput } from '@/shared/UI/CustomInput';
 import { CustomButton } from '@/shared/UI/CustomButton';
-import { cn } from '@/shared/lib';
 
 import cl from './ApplicationPage.module.scss';
 
 export const ApplicationPage = () => {
+  const [telegram, setTelegram] = useState('');
   const navigate = useNavigate();
 
-  const handleSubmit = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const xhr = new XMLHttpRequest();
+    const formData = new FormData(event.target);
+
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          console.log('Отправлено');
+        }
+      }
+    };
+
+    xhr.open('POST', 'mail.php', true);
+    xhr.send(formData);
     navigate('success');
+    setTelegram('');
   };
 
   return (
@@ -23,7 +40,14 @@ export const ApplicationPage = () => {
         </h2>
       </div>
       <form action="#" className={cl.application__controls} onSubmit={handleSubmit}>
-        <CustomInput placeholder="Ваш телеграм" value="" onChange={() => {}} />
+        <CustomInput
+          name="Telegram"
+          placeholder="Ваш телеграм"
+          value={telegram}
+          onChange={(e) => {
+            setTelegram(e.target.value);
+          }}
+        />
         <CustomButton />
       </form>
     </div>
