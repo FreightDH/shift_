@@ -30,6 +30,14 @@
       opacity: 0.3;
     }
   }
+
+  &.blur--blue {
+    background-color: #2d35ff;
+
+    @media (max-width: $mobileSmall) {
+      // opacity: 0.3;
+    }
+  }
 }
 
 .bg__grey {

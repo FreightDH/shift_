@@ -10,7 +10,7 @@ export const Header = () => {
       <div className="header__container">
         <div className={cl.header__body}>
           <div className={cl.header__logo}>
-            <Link to="/">Шифт_</Link>
+            <Link to="/home">Шифт_</Link>
           </div>
           <BurgerMenu />
         </div>

@@ -6,7 +6,7 @@
 
 //<ШРИФТЫ>
 @import 'base/fonts';
-@import url(https://fonts.googleapis.com/css?family=Montserrat+Alternates:regular,500,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat+Alternates:regular,500,600,700);
 
 // Параметры по умолчанию
 $fontFamily: 'Montserrat Alternates', sans-serif;
@@ -40,6 +40,8 @@ $mobileSmall: toEm(479.98); // Телефоны S
     max-width: toRem($maxWidthContainer);
     box-sizing: content-box;
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
   }
   @if ($containerPadding > 0) {
     padding: 0 toRem(math.div($containerPadding, 2));

@@ -5,9 +5,9 @@
   max-width: 400px;
   @include adaptiveValue('max-width', 400, 200);
 
-  padding: 10px 15px;
-  @include adaptiveValue('padding-left', 15, 10);
-  @include adaptiveValue('padding-right', 15, 10);
+  padding: 10px 25px;
+  @include adaptiveValue('padding-left', 25, 10);
+  @include adaptiveValue('padding-right', 25, 10);
 
   font-size: 20px;
   @include adaptiveValue('font-size', 20, 15);
