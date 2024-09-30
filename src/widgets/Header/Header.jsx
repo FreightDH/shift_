@@ -1,4 +1,7 @@
+import { Link } from 'react-router-dom';
+
 import { BurgerMenu } from '@/shared/UI/BurgerMenu';
+
 import cl from './Header.module.scss';
 
 export const Header = () => {
@@ -7,9 +10,7 @@ export const Header = () => {
       <div className="header__container">
         <div className={cl.header__body}>
           <div className={cl.header__logo}>
-            <a href="/" target="blank">
-              Шифт_
-            </a>
+            <Link to="/">Шифт_</Link>
           </div>
           <BurgerMenu />
         </div>

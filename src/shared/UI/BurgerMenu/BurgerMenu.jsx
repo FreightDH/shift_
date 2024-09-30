@@ -46,7 +46,7 @@ export const BurgerMenu = () => {
             </Link>
           </li>
           <li className={cl.menu__item}>
-            <Link className={cn(cl.menu__link, { [cl.active]: pathname === '/' })} to="/">
+            <Link className={cn(cl.menu__link, { [cl.active]: pathname === '' })} to="">
               <span>Оферта</span>
             </Link>
           </li>
