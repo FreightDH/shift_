@@ -10,13 +10,8 @@ import { SuccessPageRoute } from '@/pages/success';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Layout />,
-    children: [HomePageRoute],
-  },
-  {
-    path: '/',
     element: <BlurLayout />,
-    children: [MissionPageRoute, ApplicationPageRoute],
+    children: [HomePageRoute, MissionPageRoute, ApplicationPageRoute],
   },
   {
     path: '/application',
