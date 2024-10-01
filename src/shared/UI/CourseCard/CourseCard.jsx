@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import { CustomButton } from '@/shared/UI/CustomButton';
 
 import lightningIcon from './assets/lightning.svg';
@@ -32,7 +34,9 @@ export const CourseCard = ({ courseInfo }) => {
         <p>{courseInfo.title}</p>
         <p className={cl.card__startups}>Сейчас {courseInfo.startups} ищут себе стажеров</p>
       </div>
-      <CustomButton style={{ color: '#fff' }} />
+      <Link to="/application">
+        <CustomButton style={{ color: '#fff' }} />
+      </Link>
     </li>
   );
 };
