@@ -4,6 +4,8 @@ import { StudyBadge } from '@/shared/UI/Badges';
 import { CustomButton } from '@/shared/UI/CustomButton';
 import { cn } from '@/shared/lib';
 
+import { CoursesSection } from '@/widgets/Sections/CoursesSection';
+
 import cl from './StudyPage.module.scss';
 
 export const StudyPage = () => {
@@ -12,7 +14,7 @@ export const StudyPage = () => {
       <section className={cl.main}>
         <div className={cn(cl.main__blur, {}, ['blur', 'blur--blue'])}></div>
         <div className={cn(cl.main__blur, {}, ['blur', 'blur--blue'])}></div>
-        <div className="main__container">
+        <div className="main__container" style={{ position: 'relative', zIndex: 2 }}>
           <div className={cl.main__body}>
             <StudyBadge />
             <div className={cl.main__titles}>
@@ -28,6 +30,7 @@ export const StudyPage = () => {
           </div>
         </div>
       </section>
+      <CoursesSection />
     </main>
   );
 };
