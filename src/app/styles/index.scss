@@ -40,8 +40,6 @@ $mobileSmall: toEm(479.98); // Телефоны S
     max-width: toRem($maxWidthContainer);
     box-sizing: content-box;
     margin: 0 auto;
-    position: relative;
-    z-index: 2;
   }
   @if ($containerPadding > 0) {
     padding: 0 toRem(math.div($containerPadding, 2));

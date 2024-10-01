@@ -25,6 +25,7 @@ export const HomePage = () => {
             </Link>
           </div>
         </div>
+        <div className={cl.home__text}>Если хочешь стать ментором, пиши нашему менеджеру - t.me/vasya</div>
       </div>
     </div>
   );

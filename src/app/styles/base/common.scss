@@ -1,6 +1,6 @@
 // Общие стили
 .blur {
-  position: fixed;
+  position: absolute;
   width: 350px;
   height: 350px;
   @include adaptiveValue('width', 350, 250);
@@ -35,7 +35,7 @@
     background-color: #2d35ff;
 
     @media (max-width: $mobileSmall) {
-      // opacity: 0.3;
+      opacity: 0.6;
     }
   }
 }
