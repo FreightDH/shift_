@@ -23,7 +23,7 @@
 
   &__content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
     @media (max-width: $mobile) {
       flex-direction: column-reverse;

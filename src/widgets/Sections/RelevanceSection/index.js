@@ -1,1 +1,1 @@
-export { RelevanceSection } from './RelevanceSection';
+export { RelevanceStudySection, RelevanceCooperateSection } from './RelevanceSection';
