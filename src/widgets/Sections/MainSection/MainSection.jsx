@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import { cn } from '@/shared/lib';
-import { StudyBadge } from '@/shared/UI/Badges';
+import { CooperateBadge, StudyBadge } from '@/shared/UI/Badges';
 import { CustomButton } from '@/shared/UI/CustomButton';
 
 import cl from './MainSection.module.scss';
@@ -37,7 +37,7 @@ export const MainCooperateSection = () => {
       <div className={cn(cl.main__blur, {}, ['blur', 'blur--blue'])}></div>
       <div className="main__container" style={{ position: 'relative', zIndex: 2 }}>
         <div className={cl.main__body}>
-          <StudyBadge />
+          <CooperateBadge />
           <div className={cl.main__titles}>
             <h1 className={cl.main__title}>Мотивированные руки и опытный ум за дешево</h1>
             <h2 className={cl.main__subtitle}>

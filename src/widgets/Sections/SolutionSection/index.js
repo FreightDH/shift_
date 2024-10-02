@@ -1,1 +1,1 @@
-export { SolutionSection } from './SolutionSection';
+export { SolutionStudySection, SolutionCooperateSection } from './SolutionSection';
