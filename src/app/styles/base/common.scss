@@ -26,8 +26,8 @@
   &.blur--green {
     background-color: #4aff2d;
 
-    @media (max-width: $mobileSmall) {
-      opacity: 0.3;
+    @media (max-width: $mobile) {
+      opacity: 0.8;
     }
   }
 
