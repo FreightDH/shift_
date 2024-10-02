@@ -5,7 +5,7 @@
   position: relative;
 
   &__blur {
-    bottom: 0;
+    bottom: 30%;
     left: 0;
 
     &:nth-child(2) {
@@ -60,10 +60,8 @@
 
   &__image {
     flex: 0 0 180px;
-    width: 180px;
     height: 180px;
     @include adaptiveValue('flex-basis', 180, 70);
-    @include adaptiveValue('width', 180, 70);
     @include adaptiveValue('height', 180, 70);
 
     img {
