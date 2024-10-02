@@ -1,0 +1,1 @@
+export { RelevanceSection } from './RelevanceSection';

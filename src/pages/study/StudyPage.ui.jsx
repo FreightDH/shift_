@@ -5,6 +5,7 @@ import { CustomButton } from '@/shared/UI/CustomButton';
 import { cn } from '@/shared/lib';
 
 import { CoursesSection } from '@/widgets/Sections/CoursesSection';
+import { RelevanceSection } from '@/widgets/Sections/RelevanceSection';
 
 import cl from './StudyPage.module.scss';
 
@@ -31,6 +32,7 @@ export const StudyPage = () => {
         </div>
       </section>
       <CoursesSection />
+      <RelevanceSection />
     </main>
   );
 };
