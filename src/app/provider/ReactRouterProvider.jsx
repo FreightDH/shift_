@@ -9,6 +9,7 @@ import { HomePageRoute } from '@/pages/home';
 import { MissionPageRoute } from '@/pages/mission';
 import { ApplicationPageRoute } from '@/pages/application';
 import { SuccessPageRoute } from '@/pages/success';
+import { CooperatePageRoute } from '@/pages/cooperate';
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Layout />,
-    children: [StudyPageRoute],
+    children: [StudyPageRoute, CooperatePageRoute],
   },
   {
     path: '/application',
