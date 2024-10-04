@@ -56,3 +56,37 @@
 
   @include adaptiveValue('border-radius', 20, 15);
 }
+//---------------------------------------------------------------------------------------
+// Стили слайдера
+.splide__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: $mobile) {
+    width: 100% !important;
+  }
+}
+
+.splide__arrow--prev {
+  left: -3em;
+}
+.splide__arrow--next {
+  right: -3em;
+}
+.splide__arrow:disabled {
+  cursor: default;
+}
+
+.splide__pagination {
+  bottom: -2.5em;
+}
+.splide__pagination__page {
+  background: #c3c3ff;
+  width: 10px;
+  height: 10px;
+}
+.splide__pagination__page.is-active {
+  background: #5f2eea;
+  transform: scale(1.5);
+}
