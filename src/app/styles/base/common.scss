@@ -58,6 +58,10 @@
 }
 //---------------------------------------------------------------------------------------
 // Стили слайдера
+.splide__list {
+  justify-content: center;
+}
+
 .splide__slide {
   display: flex;
   justify-content: center;

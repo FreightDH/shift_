@@ -1,13 +1,13 @@
 import { cn } from '@/shared/lib';
 
-import arrowIcon from './assets/arrow.svg';
+import { arrowAltIcon, arrowIcon } from './assets';
 import cl from './CustomButton.module.scss';
 
-export const CustomButton = ({ onClick, className, ...props }) => {
+export const CustomButton = ({ onClick, alternative, ...props }) => {
   return (
-    <button className={cn(cl.btn, {}, [className])} onClick={onClick} {...props}>
+    <button className={cn(cl.btn, { [cl.alternative]: alternative })} onClick={onClick} {...props}>
       <span>Подать заявку</span>
-      <img alt="arrow-icon" src={arrowIcon} />
+      <img alt="arrow-icon" src={alternative ? arrowAltIcon : arrowIcon} />
     </button>
   );
 };

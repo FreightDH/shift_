@@ -35,7 +35,7 @@ export const CourseCard = ({ courseInfo }) => {
         <p className={cl.card__startups}>Сейчас {courseInfo.startups} ищут себе стажеров</p>
       </div>
       <Link to="/application">
-        <CustomButton style={{ color: '#fff' }} />
+        <CustomButton />
       </Link>
     </li>
   );
