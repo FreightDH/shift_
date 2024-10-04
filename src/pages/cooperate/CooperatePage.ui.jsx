@@ -3,6 +3,7 @@ import { RelevanceCooperateSection } from '@/widgets/Sections/RelevanceSection';
 import { SolutionCooperateSection } from '@/widgets/Sections/SolutionSection';
 import { MentorsSection } from '@/widgets/Sections/MentorsSection';
 import { ServicesCooperateSection } from '@/widgets/Sections/ServicesSection';
+import { VideoSection } from '@/widgets/Sections/VideoSection';
 
 export const CooperatePage = () => {
   return (
@@ -12,6 +13,7 @@ export const CooperatePage = () => {
       <SolutionCooperateSection />
       <MentorsSection />
       <ServicesCooperateSection />
+      <VideoSection />
     </main>
   );
 };
