@@ -1,0 +1,140 @@
+@import '@/app/styles';
+
+.services {
+  padding: 50px 0px 0px 0px;
+  @include adaptiveValue('padding-top', 50, 25);
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    @include adaptiveValue('gap', 30, 15);
+  }
+
+  &__title {
+    font-size: 35px;
+    @include adaptiveValue('font-size', 35, 25);
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    @include adaptiveValue('gap', 30, 15);
+
+    @media (max-width: $tablet) {
+      justify-content: center;
+    }
+  }
+
+  &__arrow {
+    padding: 30px 0px 0px 0px;
+    @include adaptiveValue('padding-top', 30, 10);
+    align-self: center;
+
+    img {
+      width: 80px;
+      height: 150px;
+      @include adaptiveValue('width', 80, 40);
+      @include adaptiveValue('height', 150, 100);
+      object-fit: contain;
+    }
+  }
+}
+
+.service {
+  flex: 0 0 50%;
+  max-width: 400px;
+  padding: 30px;
+  @include adaptiveValue('padding', 30, 15);
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @include adaptiveValue('gap', 20, 15);
+
+  background-color: #fff;
+  color: #000;
+
+  @media (max-width: 860px) {
+    max-width: 100%;
+    flex: 1 1 auto;
+  }
+
+  &.alternative {
+    color: #fff;
+    background-color: #5f2eea;
+  }
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+    @include adaptiveValue('width', 50, 40);
+    @include adaptiveValue('height', 50, 40);
+
+    border-radius: 50%;
+    background-color: #5f2eea;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 30px;
+      height: 30px;
+      @include adaptiveValue('width', 30, 25);
+      @include adaptiveValue('height', 30, 25);
+      object-fit: cover;
+    }
+
+    &.alternative {
+      background-color: #fff;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    @include adaptiveValue('font-size', 20, 18);
+  }
+
+  &__advantages {
+    flex: 1 1 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @include adaptiveValue('gap', 10, 5);
+
+    @include adaptiveValue('font-size', 16, 14);
+
+    li {
+      padding: 0px 0px 0px 12px;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        top: 7px;
+        left: 0;
+
+        background-color: #000;
+        border-radius: 50%;
+      }
+
+      span {
+        font-weight: 700;
+      }
+    }
+
+    &.alternative {
+      li {
+        &::after {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}
