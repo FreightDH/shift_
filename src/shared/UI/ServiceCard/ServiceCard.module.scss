@@ -1,0 +1,58 @@
+@import '@/app/styles/base/mixins';
+
+.service {
+  flex: 0 0 50%;
+  max-width: 400px;
+  padding: 30px;
+  @include adaptiveValue('padding', 30, 15);
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @include adaptiveValue('gap', 20, 15);
+
+  background-color: #fff;
+  color: #000;
+  @include adaptiveValue('font-size', 16, 14);
+
+  @media (max-width: 860px) {
+    max-width: 100%;
+    flex: 1 1 auto;
+  }
+
+  &.alternative {
+    color: #fff;
+    background-color: #5f2eea;
+  }
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+    @include adaptiveValue('width', 50, 40);
+    @include adaptiveValue('height', 50, 40);
+
+    border-radius: 50%;
+    background-color: #5f2eea;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 30px;
+      height: 30px;
+      @include adaptiveValue('width', 30, 25);
+      @include adaptiveValue('height', 30, 25);
+      object-fit: cover;
+    }
+
+    &.alternative {
+      background-color: #fff;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    @include adaptiveValue('font-size', 20, 18);
+  }
+}

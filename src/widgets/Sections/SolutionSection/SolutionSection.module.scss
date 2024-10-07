@@ -1,6 +1,8 @@
 @import '@/app/styles/base/mixins';
 
 .solution {
+  padding: 50px 0px 0px 0px;
+  @include adaptiveValue('padding-top', 50, 25);
   position: relative;
 
   &__blur {
@@ -48,18 +50,6 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
-  }
-
-  &__arrow {
-    align-self: center;
-
-    img {
-      width: 60px;
-      height: 130px;
-      @include adaptiveValue('width', 60, 40);
-      @include adaptiveValue('height', 130, 100);
-      object-fit: contain;
     }
   }
 }

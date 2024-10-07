@@ -1,25 +1,5 @@
 @use 'sass:math';
 
-//<ПЕРЕМЕННЫЕ>
-// Минимальная ширина страницы
-$minWidth: 320;
-// Ширина макета
-$maxWidth: 1730;
-// Ширина контейнера
-$maxWidthContainer: 1510;
-// Общий отступ у контейнера
-$containerPadding: 30;
-
-// Ширина срабатывания первого брейкпоинта
-$containerWidth: $maxWidthContainer + $containerPadding;
-
-// Брейк-поинты
-$pc: toEm($containerWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
-$tablet: toEm(991.98); // Планшеты, некоторые телефоны в горизонтальном положении
-$mobile: toEm(767.98); // Телефоны L
-$mobileSmall: toEm(479.98); // Телефоны S
-//</ПЕРЕМЕННЫЕ>
-
 @function toRem($px) {
   $result: math.div($px, 16) + rem;
   @return $result;
@@ -99,3 +79,5 @@ $mobileSmall: toEm(479.98); // Телефоны S
     }
   }
 }
+
+@import './variables';

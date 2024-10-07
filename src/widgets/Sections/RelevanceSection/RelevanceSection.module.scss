@@ -1,7 +1,8 @@
 @import '@/app/styles/base/mixins';
 
 .relevance {
-  padding: 30px 0px 0px 0px;
+  padding: 50px 0px 0px 0px;
+  @include adaptiveValue('padding-top', 50, 25);
   position: relative;
 
   &__blur {
@@ -22,6 +23,8 @@
   }
 
   &__content {
+    margin: 0px 0px 30px 0px;
+    @include adaptiveValue('margin-bottom', 30, 0);
     display: flex;
     justify-content: space-around;
     align-items: start;
@@ -31,20 +34,6 @@
       justify-content: center;
       align-items: center;
       gap: 30px;
-    }
-  }
-
-  &__arrow {
-    padding: 30px 0px 0px 0px;
-    @include adaptiveValue('padding-top', 30, 10);
-    align-self: center;
-
-    img {
-      width: 80px;
-      height: 150px;
-      @include adaptiveValue('width', 80, 40);
-      @include adaptiveValue('height', 150, 100);
-      object-fit: contain;
     }
   }
 }

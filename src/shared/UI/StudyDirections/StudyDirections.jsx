@@ -1,9 +1,9 @@
 import { cn } from '@/shared/lib';
 
 import handImg from './assets/hand.png';
-import cl from './Directions.module.scss';
+import cl from './StudyDirections.module.scss';
 
-export const Directions = () => {
+export const StudyDirections = () => {
   return (
     <div className={cl.directions}>
       <div className={cn(cl.directions__body, {}, ['bg__grey'])}>

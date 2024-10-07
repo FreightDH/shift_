@@ -1,7 +1,8 @@
 import { cn } from '@/shared/lib';
+import { Arrow } from '@/shared/UI/Arrow';
 import { CustomButton } from '@/shared/UI/CustomButton';
+import { ServiceAdvancedCard, ServiceStandardCard } from '@/shared/UI/ServiceCard';
 
-import { arrowIcon, lightningIcon } from './assets';
 import cl from './ServicesSection.module.scss';
 
 export const ServicesStudySection = () => {
@@ -11,29 +12,24 @@ export const ServicesStudySection = () => {
         <div className={cl.services__body}>
           <h3 className={cl.services__title}>Пакеты услуг</h3>
           <ul className={cl.services__list}>
-            <li className={cl.service}>
-              <div className={cl.service__icon}>
-                <img alt="lightning-icon" src={lightningIcon} />
-              </div>
-              <div className={cl.service__title}>Стандартный план</div>
-              <div className={cl.service__price}>12.000₽/месяц, 6 месяцев или 72.000₽ сразу</div>
-              <div className={cl.service__footer}>
-                <p className={cl.service__salary}>Зарплата со стажировки остаётся полностью вам</p>
-                <CustomButton />
-              </div>
-            </li>
-            <li className={cn(cl.service, {}, [cl.alternative])}>
-              <div className={cn(cl.service__icon, {}, [cl.alternative])}>
-                <img alt="lightning-icon" src={lightningIcon} />
-              </div>
-              <div className={cl.service__title}>Продвинутый план</div>
+            <ServiceStandardCard>
               <div className={cl.service__price}>7.000₽/месяц, 6 месяцев или 40.000₽ сразу</div>
               <div className={cl.service__footer}>
                 <p>Зарплата со стажировки остаётся вам на 30%</p>
+                <CustomButton />
+              </div>
+            </ServiceStandardCard>
+            <ServiceAdvancedCard>
+              <div className={cl.service__price}>12.000₽/месяц, 6 месяцев или 72.000₽ сразу</div>
+              <div className={cl.service__footer}>
+                <p className={cl.service__salary}>Зарплата со стажировки остаётся полностью вам</p>
                 <CustomButton alternative />
               </div>
-            </li>
+            </ServiceAdvancedCard>
           </ul>
+          <p className={cl.services__info}>
+            *Перед покупкой мы обязательно с вами созвонимся и обсудим все интересующие моменты
+          </p>
         </div>
       </div>
     </section>
@@ -47,11 +43,7 @@ export const ServicesCooperateSection = () => {
         <div className={cl.services__body}>
           <h3 className={cl.services__title}>Пакеты услуг</h3>
           <ul className={cl.services__list}>
-            <li className={cl.service}>
-              <div className={cl.service__icon}>
-                <img alt="lightning-icon" src={lightningIcon} />
-              </div>
-              <div className={cl.service__title}>Стандартный план</div>
+            <ServiceStandardCard>
               <ul className={cl.service__advantages}>
                 <li>Находим стажера под именно ваши требования</li>
                 <li>
@@ -65,12 +57,8 @@ export const ServicesCooperateSection = () => {
                 </li>
               </ul>
               <CustomButton />
-            </li>
-            <li className={cn(cl.service, {}, [cl.alternative])}>
-              <div className={cn(cl.service__icon, {}, [cl.alternative])}>
-                <img alt="lightning-icon" src={lightningIcon} />
-              </div>
-              <div className={cl.service__title}>Продвинутый план</div>
+            </ServiceStandardCard>
+            <ServiceAdvancedCard>
               <ul className={cn(cl.service__advantages, {}, [cl.alternative])}>
                 <li>Все, что в стандартном плане</li>
                 <li>
@@ -83,11 +71,9 @@ export const ServicesCooperateSection = () => {
                 </li>
               </ul>
               <CustomButton alternative />
-            </li>
+            </ServiceAdvancedCard>
           </ul>
-          <div className={cl.services__arrow}>
-            <img alt="arrow-icon" src={arrowIcon} />
-          </div>
+          <Arrow />
         </div>
       </div>
     </section>

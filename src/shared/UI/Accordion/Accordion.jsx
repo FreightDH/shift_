@@ -1,8 +1,9 @@
 import { useRef, useState } from 'react';
 
+import { cn } from '@/shared/lib';
+
 import arrowIcon from './assets/arrow.svg';
 import cl from './Accordion.module.scss';
-import { cn } from '@/shared/lib';
 
 const AccordionItem = ({ item }) => {
   const { question, answer } = item;

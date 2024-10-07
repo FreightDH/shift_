@@ -1,0 +1,1 @@
+export { StudyDirections } from './StudyDirections';

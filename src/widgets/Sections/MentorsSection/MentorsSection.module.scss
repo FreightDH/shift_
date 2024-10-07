@@ -2,7 +2,7 @@
 
 .mentors {
   padding: 50px 0px 0px 0px;
-  @include adaptiveValue('padding-top', 50, 25);
+  @include adaptiveValue('padding-top', 50, 15);
 
   &__body {
     display: flex;
@@ -15,18 +15,5 @@
   &__title {
     font-size: 35px;
     @include adaptiveValue('font-size', 35, 25);
-  }
-
-  &__arrow {
-    margin: 50px 0px 0px 0px;
-    align-self: center;
-
-    img {
-      width: 60px;
-      height: 130px;
-      @include adaptiveValue('width', 60, 40);
-      @include adaptiveValue('height', 130, 100);
-      object-fit: contain;
-    }
   }
 }

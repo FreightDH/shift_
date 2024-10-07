@@ -1,7 +1,8 @@
 import { cn } from '@/shared/lib';
-import { Directions } from '@/shared/UI/Directions';
+import { ArrowSmall } from '@/shared/UI/Arrow';
+import { StudyDirections } from '@/shared/UI/StudyDirections';
 
-import { arrowIcon, codingImg, markupIcon } from './assets';
+import { codingImg, markupIcon } from './assets';
 import cl from './SolutionSection.module.scss';
 
 export const SolutionStudySection = () => {
@@ -42,9 +43,7 @@ export const SolutionStudySection = () => {
               <img alt="coding" src={codingImg} />
             </div>
           </div>
-          <div className={cl.solution__arrow}>
-            <img alt="arrow-icon" src={arrowIcon} />
-          </div>
+          <ArrowSmall />
         </div>
       </div>
     </section>
@@ -68,7 +67,7 @@ export const SolutionCooperateSection = () => {
                 </div>
               </div>
             </div>
-            <Directions />
+            <StudyDirections />
           </div>
           <div className={cl.solution__content}>
             <div className={cl.advantages}>
@@ -92,9 +91,7 @@ export const SolutionCooperateSection = () => {
               <img alt="coding" src={codingImg} />
             </div>
           </div>
-          <div className={cl.solution__arrow}>
-            <img alt="arrow-icon" src={arrowIcon} />
-          </div>
+          <ArrowSmall />
         </div>
       </div>
     </section>

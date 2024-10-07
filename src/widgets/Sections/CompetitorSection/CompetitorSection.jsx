@@ -1,4 +1,5 @@
-import arrowIcon from './assets/arrow.png';
+import { Arrow } from '@/shared/UI/Arrow';
+
 import cl from './CompetitorSection.module.scss';
 
 export const CompetitorSection = () => {
@@ -14,9 +15,7 @@ export const CompetitorSection = () => {
               folio.works
             </a>
           </p>
-          <div className={cl.competitor__arrow}>
-            <img alt="arrow-icon" src={arrowIcon} />
-          </div>
+          <Arrow />
         </div>
       </div>
     </section>

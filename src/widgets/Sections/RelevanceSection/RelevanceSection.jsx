@@ -1,6 +1,7 @@
 import { cn } from '@/shared/lib';
+import { Arrow } from '@/shared/UI/Arrow';
 
-import { arrowIcon, dislikeIcon, fireImg } from './assets';
+import { dislikeIcon, fireImg } from './assets';
 import cl from './RelevanceSection.module.scss';
 
 export const RelevanceStudySection = () => {
@@ -46,9 +47,7 @@ export const RelevanceStudySection = () => {
               </div>
             </div>
           </div>
-          <div className={cl.relevance__arrow}>
-            <img alt="arrow-icon" src={arrowIcon} />
-          </div>
+          <Arrow />
         </div>
       </div>
     </section>
@@ -95,9 +94,7 @@ export const RelevanceCooperateSection = () => {
               </div>
             </div>
           </div>
-          <div className={cl.relevance__arrow}>
-            <img alt="arrow-icon" src={arrowIcon} />
-          </div>
+          <Arrow />
         </div>
       </div>
     </section>

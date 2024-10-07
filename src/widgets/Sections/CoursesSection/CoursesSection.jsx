@@ -1,6 +1,6 @@
 import { CourseCard } from '@/shared/UI/CourseCard';
+import { Arrow } from '@/shared/UI/Arrow';
 
-import { arrowIcon } from './assets';
 import { coursesInfo } from './coursesInfo';
 import cl from './CoursesSection.module.scss';
 
@@ -26,7 +26,7 @@ export const CoursesSection = () => {
           </p>
           <div className={cl.courses__idea}>
             <span>А теперь про идею!</span>
-            <img alt="arrow-image" src={arrowIcon} />
+            <Arrow />
           </div>
         </div>
       </div>

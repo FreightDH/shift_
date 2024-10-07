@@ -63,13 +63,5 @@
       font-size: 20px;
       @include adaptiveValue('font-size', 20, 16);
     }
-
-    img {
-      width: 80px;
-      height: 150px;
-      @include adaptiveValue('width', 80, 40);
-      @include adaptiveValue('height', 150, 100);
-      object-fit: contain;
-    }
   }
 }

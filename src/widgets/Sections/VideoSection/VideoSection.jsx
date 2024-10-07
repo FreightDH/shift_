@@ -1,6 +1,6 @@
 import { cn } from '@/shared/lib';
+import { ArrowSmall } from '@/shared/UI/Arrow';
 
-import arrowIcon from './assets/arrow.png';
 import cl from './VideoSection.module.scss';
 
 export const VideoSection = ({ withArrow }) => {
@@ -14,7 +14,7 @@ export const VideoSection = ({ withArrow }) => {
             <h3 className={cl.video__title}>Еще не до конца уверены?</h3>
             <p className={cl.video__text}>Посмотрите ролик, который мы сняли специально для вас</p>
             <iframe
-              allowfullscreen
+              allowFullScreen
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               className={cl.video__player}
               referrerPolicy="strict-origin-when-cross-origin"
@@ -22,11 +22,7 @@ export const VideoSection = ({ withArrow }) => {
               title="YouTube video player"
             ></iframe>
           </div>
-          {withArrow && (
-            <div className={cl.video__arrow}>
-              <img alt="arrow-icon" src={arrowIcon} />
-            </div>
-          )}
+          {withArrow && <ArrowSmall />}
         </div>
       </div>
     </section>
