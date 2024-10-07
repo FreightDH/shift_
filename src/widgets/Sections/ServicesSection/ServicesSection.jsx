@@ -5,7 +5,39 @@ import { arrowIcon, lightningIcon } from './assets';
 import cl from './ServicesSection.module.scss';
 
 export const ServicesStudySection = () => {
-  return <div></div>;
+  return (
+    <section className={cl.services}>
+      <div className="services__container">
+        <div className={cl.services__body}>
+          <h3 className={cl.services__title}>Пакеты услуг</h3>
+          <ul className={cl.services__list}>
+            <li className={cl.service}>
+              <div className={cl.service__icon}>
+                <img alt="lightning-icon" src={lightningIcon} />
+              </div>
+              <div className={cl.service__title}>Стандартный план</div>
+              <div className={cl.service__price}>12.000₽/месяц, 6 месяцев или 72.000₽ сразу</div>
+              <div className={cl.service__footer}>
+                <p className={cl.service__salary}>Зарплата со стажировки остаётся полностью вам</p>
+                <CustomButton />
+              </div>
+            </li>
+            <li className={cn(cl.service, {}, [cl.alternative])}>
+              <div className={cn(cl.service__icon, {}, [cl.alternative])}>
+                <img alt="lightning-icon" src={lightningIcon} />
+              </div>
+              <div className={cl.service__title}>Продвинутый план</div>
+              <div className={cl.service__price}>7.000₽/месяц, 6 месяцев или 40.000₽ сразу</div>
+              <div className={cl.service__footer}>
+                <p>Зарплата со стажировки остаётся вам на 30%</p>
+                <CustomButton alternative />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export const ServicesCooperateSection = () => {

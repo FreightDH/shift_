@@ -27,6 +27,18 @@
   &.alternative {
     background-color: #fff;
     color: #000;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: #cbcbcb;
+      }
+    }
+
+    @media (hover: none) {
+      &:active {
+        background-color: #cbcbcb;
+      }
+    }
   }
 
   img {

@@ -56,6 +56,7 @@
 
   background-color: #fff;
   color: #000;
+  @include adaptiveValue('font-size', 16, 14);
 
   @media (max-width: 860px) {
     max-width: 100%;
@@ -106,8 +107,6 @@
     gap: 10px;
     @include adaptiveValue('gap', 10, 5);
 
-    @include adaptiveValue('font-size', 16, 14);
-
     li {
       padding: 0px 0px 0px 12px;
       position: relative;
@@ -136,5 +135,18 @@
         }
       }
     }
+  }
+
+  &__price {
+    flex: 1 1 auto;
+  }
+
+  &__footer {
+    padding: 50px 0px 0px 0px;
+    @include adaptiveValue('padding-top', 50, 25);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    @include adaptiveValue('gap', 15, 10);
   }
 }
