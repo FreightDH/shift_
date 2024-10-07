@@ -1,0 +1,64 @@
+@import '@/app/styles';
+
+.accordion {
+  padding: 30px;
+  @include adaptiveValue('padding-top', 30, 15);
+  @include adaptiveValue('padding-bottom', 30, 15);
+  @include adaptiveValue('padding-right', 30, 15);
+  @include adaptiveValue('padding-left', 30, 15);
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  font-size: 20px;
+  @include adaptiveValue('font-size', 20, 16);
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+
+  border-bottom: 1px solid #818181;
+  overflow: hidden;
+
+  &__question {
+    padding: 0px 0px 5px 0px;
+    width: 100%;
+
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+
+    p {
+      text-align: left;
+      font-weight: 500;
+    }
+
+    img {
+      width: 30px;
+      height: 30px;
+      @include adaptiveValue('width', 30, 20);
+      @include adaptiveValue('height', 30, 20);
+      object-fit: cover;
+      transition: all 0.5s ease 0s;
+    }
+
+    &.active {
+      img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__answer {
+    transition: all 0.5s ease 0s;
+
+    p {
+      padding: 5px 0 10px;
+      font-size: 18px;
+      @include adaptiveValue('font-size', 18, 16);
+      font-weight: 400;
+    }
+  }
+}
