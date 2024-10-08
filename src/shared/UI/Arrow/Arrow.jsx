@@ -1,5 +1,6 @@
-import { arrowIcon, arrowSmallIcon } from './assets';
+import { arrowIcon, arrowSmallIcon, arrowStepIcon } from './assets';
 import cl from './Arrow.module.scss';
+import { cn } from '@/shared/lib';
 
 export const Arrow = () => {
   return (
@@ -13,6 +14,14 @@ export const ArrowSmall = () => {
   return (
     <div className={cl.arrow__small}>
       <img alt="arrow-icon" src={arrowSmallIcon} />
+    </div>
+  );
+};
+
+export const ArrowStep = ({ mirrored }) => {
+  return (
+    <div className={cn(cl.arrow__step, { [cl.mirror]: mirrored })}>
+      <img alt="arrow-icon" src={arrowStepIcon} />
     </div>
   );
 };

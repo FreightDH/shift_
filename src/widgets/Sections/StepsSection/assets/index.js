@@ -5,7 +5,6 @@ import cardBottom_2 from './card_2_1.png';
 import cardTop_3 from './card_3.png';
 import cardBottom_3 from './card_3_1.png';
 import cardTop_4 from './card_4.png';
-import arrowIcon from './arrow.png';
 
 import step_1 from './step_1.png';
 import step_2 from './step_2.png';
@@ -24,5 +23,4 @@ export {
   step_2,
   step_3,
   step_4,
-  arrowIcon,
 };

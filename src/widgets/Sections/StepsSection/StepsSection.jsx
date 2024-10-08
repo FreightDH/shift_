@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 
 import { cn } from '@/shared/lib';
+import { ArrowStep } from '@/shared/UI/Arrow';
 import { CustomButton } from '@/shared/UI/CustomButton';
 
 import {
-  arrowIcon,
   cardBottom_1,
   cardBottom_2,
   cardBottom_3,
@@ -12,11 +12,8 @@ import {
   cardTop_2,
   cardTop_3,
   cardTop_4,
-  step_1,
-  step_2,
-  step_3,
-  step_4,
 } from './assets';
+import { stepsInfo } from './stepsInfo';
 import cl from './StepsSection.module.scss';
 
 export const StepsSection = () => {
@@ -26,6 +23,7 @@ export const StepsSection = () => {
         <div className={cl.steps__body}>
           <div className={cl.steps__cards}>
             <div className={cl.card}>
+              <div className={cn(cl.card__blur, {}, ['blur', 'blur--blue'])}></div>
               <div className={cl.card__title}>1 день</div>
               <div className={cn(cl.card__body, {}, [cl.bgPurple])}>
                 <div className={cl.card__top}>
@@ -53,10 +51,9 @@ export const StepsSection = () => {
                 </div>
               </div>
             </div>
-            <div className={cl.cards__arrow}>
-              <img alt="arrow-icon" src={arrowIcon} />
-            </div>
+            <ArrowStep />
             <div className={cl.card}>
+              <div className={cn(cl.card__blur, {}, ['blur', 'blur--orange'])}></div>
               <div className={cl.card__title}>3 месяца</div>
               <div className={cn(cl.card__body, {}, [cl.bgOrange])}>
                 <div className={cl.card__top}>
@@ -80,10 +77,9 @@ export const StepsSection = () => {
                 </div>
               </div>
             </div>
-            <div className={cn(cl.cards__arrow, {}, [cl.mirror])}>
-              <img alt="arrow-icon" src={arrowIcon} />
-            </div>
+            <ArrowStep mirrored />
             <div className={cl.card}>
+              <div className={cn(cl.card__blur, {}, ['blur', 'blur--green'])}></div>
               <div className={cl.card__title}>2 месяца</div>
               <div className={cn(cl.card__body, {}, [cl.bgGreen])}>
                 <div className={cl.card__top}>
@@ -116,9 +112,7 @@ export const StepsSection = () => {
             <p className={cl.steps__text}>
               На этом этапе уже можно считать, что карьера сложилась, большую часть студентов берут в штат
             </p>
-            <div className={cl.cards__arrow}>
-              <img alt="arrow-icon" src={arrowIcon} />
-            </div>
+            <ArrowStep />
             <div className={cl.card}>
               <div className={cl.card__title}>Всю жизнь</div>
               <div className={cn(cl.card__body, {}, [cl.bgBlue])}>
@@ -149,32 +143,18 @@ export const StepsSection = () => {
             </p>
           </div>
           <div className={cl.steps__scroll}>
-            <div className={cl.scroll__slider}></div>
+            <div className={cl.scroll__slider}>
+              <div className={cl.scroll__progress}></div>
+            </div>
             <div className={cl.scroll__items}>
-              <div className={cl.step}>
-                <div className={cl.step__text}>Шаг 1. Знакомство, собеседование</div>
-                <div className={cl.step__img}>
-                  <img alt="step-1-image" src={step_1} />
+              {stepsInfo.map(({ id, text, img }) => (
+                <div key={id} className={cl.step}>
+                  <div className={cl.step__text}>{text}</div>
+                  <div className={cl.step__img}>
+                    <img alt="step-image" src={img} />
+                  </div>
                 </div>
-              </div>
-              <div className={cl.step}>
-                <div className={cl.step__text}>Шаг 2. Самообразование с ментором</div>
-                <div className={cl.step__img}>
-                  <img alt="step-2-image" src={step_2} />
-                </div>
-              </div>
-              <div className={cl.step}>
-                <div className={cl.step__text}>Шаг 3. Первая стажировка в стартапе</div>
-                <div className={cl.step__img}>
-                  <img alt="step-3-image" src={step_3} />
-                </div>
-              </div>
-              <div className={cl.step}>
-                <div className={cl.step__text}>Шаг 4. Комьюнити</div>
-                <div className={cl.step__img}>
-                  <img alt="step-4-image" src={step_4} />
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>

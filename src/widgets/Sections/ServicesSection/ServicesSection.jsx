@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import { cn } from '@/shared/lib';
 import { Arrow } from '@/shared/UI/Arrow';
 import { CustomButton } from '@/shared/UI/CustomButton';
@@ -16,14 +18,18 @@ export const ServicesStudySection = () => {
               <div className={cl.service__price}>7.000₽/месяц, 6 месяцев или 40.000₽ сразу</div>
               <div className={cl.service__footer}>
                 <p>Зарплата со стажировки остаётся вам на 30%</p>
-                <CustomButton />
+                <Link to="/application">
+                  <CustomButton />
+                </Link>
               </div>
             </ServiceStandardCard>
             <ServiceAdvancedCard>
               <div className={cl.service__price}>12.000₽/месяц, 6 месяцев или 72.000₽ сразу</div>
               <div className={cl.service__footer}>
                 <p className={cl.service__salary}>Зарплата со стажировки остаётся полностью вам</p>
-                <CustomButton alternative />
+                <Link to="/application">
+                  <CustomButton alternative />
+                </Link>
               </div>
             </ServiceAdvancedCard>
           </ul>
@@ -56,7 +62,9 @@ export const ServicesCooperateSection = () => {
                   человек подходит)
                 </li>
               </ul>
-              <CustomButton />
+              <Link to="/application">
+                <CustomButton />
+              </Link>
             </ServiceStandardCard>
             <ServiceAdvancedCard>
               <ul className={cn(cl.service__advantages, {}, [cl.alternative])}>
@@ -70,7 +78,9 @@ export const ServicesCooperateSection = () => {
                   сотрудникам лучшие практики
                 </li>
               </ul>
-              <CustomButton alternative />
+              <Link to="/application">
+                <CustomButton alternative />
+              </Link>
             </ServiceAdvancedCard>
           </ul>
           <Arrow />

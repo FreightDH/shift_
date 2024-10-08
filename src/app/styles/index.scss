@@ -27,6 +27,10 @@ $mainColor: #fff;
   }
   @if ($containerPadding > 0) {
     padding: 0 toRem(math.div($containerPadding, 2));
+
+    @media (max-width: $mobileSmall) {
+      padding: 0 toRem(15);
+    }
   }
 }
 //</КОНТЕЙНЕР>

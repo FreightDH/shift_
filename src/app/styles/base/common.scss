@@ -38,6 +38,14 @@
       opacity: 0.6;
     }
   }
+
+  &.blur--orange {
+    background-color: #eb800c;
+
+    @media (max-width: $mobileSmall) {
+      opacity: 0.6;
+    }
+  }
 }
 
 .bg__grey {
