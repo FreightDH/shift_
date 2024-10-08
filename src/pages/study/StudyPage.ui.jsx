@@ -2,6 +2,7 @@ import { MainStudySection } from '@/widgets/Sections/MainSection';
 import { CoursesSection } from '@/widgets/Sections/CoursesSection';
 import { RelevanceStudySection } from '@/widgets/Sections/RelevanceSection';
 import { SolutionStudySection } from '@/widgets/Sections/SolutionSection';
+import { StepsSection } from '@/widgets/Sections/StepsSection';
 import { MentorsSection } from '@/widgets/Sections/MentorsSection';
 import { CompetitorSection } from '@/widgets/Sections/CompetitorSection';
 import { VideoSection } from '@/widgets/Sections/VideoSection';
@@ -15,6 +16,7 @@ export const StudyPage = () => {
       <CoursesSection />
       <RelevanceStudySection />
       <SolutionStudySection />
+      <StepsSection />
       <MentorsSection />
       <CompetitorSection />
       <VideoSection withArrow />
