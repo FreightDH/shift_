@@ -11,25 +11,22 @@ import { MissionPageRoute } from '@/pages/mission';
 import { ApplicationPageRoute } from '@/pages/application';
 import { SuccessPageRoute } from '@/pages/success';
 
-const router = createBrowserRouter(
-  [
-    {
-      path: '/',
-      element: <BlurLayout />,
-      children: [HomePageRoute, MissionPageRoute, ApplicationPageRoute],
-    },
-    {
-      path: '/',
-      element: <Layout />,
-      children: [StudyPageRoute, CooperatePageRoute],
-    },
-    {
-      path: '/application',
-      element: <BlurLayout />,
-      children: [SuccessPageRoute],
-    },
-  ],
-  { basename: import.meta.env.BASE_URL }
-);
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <BlurLayout />,
+    children: [HomePageRoute, MissionPageRoute, ApplicationPageRoute],
+  },
+  {
+    path: '/',
+    element: <Layout />,
+    children: [StudyPageRoute, CooperatePageRoute],
+  },
+  {
+    path: '/application',
+    element: <BlurLayout />,
+    children: [SuccessPageRoute],
+  },
+]);
 
 export const ReactRouterProvider = () => <RouterProvider router={router} />;

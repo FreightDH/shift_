@@ -1,9 +1,10 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import VitePluginWebpCompress from 'vite-plugin-webp-compress';
 
 export default defineConfig({
-  base: '/shift_',
-  plugins: [react()],
+  base: '',
+  plugins: [react(), VitePluginWebpCompress()],
   resolve: {
     alias: {
       '@': '/src',
