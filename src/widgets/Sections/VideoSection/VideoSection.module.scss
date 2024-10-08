@@ -3,7 +3,7 @@
 .video {
   padding: 50px 0px;
   @include adaptiveValue('padding-top', 50, 25);
-  @include adaptiveValue('padding-bottom', 50, 15);
+  @include adaptiveValue('padding-bottom', 50, 0);
 
   position: relative;
 

@@ -8,6 +8,7 @@ import { CompetitorSection } from '@/widgets/Sections/CompetitorSection';
 import { VideoSection } from '@/widgets/Sections/VideoSection';
 import { ServicesStudySection } from '@/widgets/Sections/ServicesSection/ServicesSection';
 import { QuestionsSection } from '@/widgets/Sections/QuestionsSection';
+import { BackToTop } from '@/shared/UI/BackToTop';
 
 export const StudyPage = () => {
   return (
@@ -22,6 +23,7 @@ export const StudyPage = () => {
       <VideoSection withArrow />
       <ServicesStudySection />
       <QuestionsSection />
+      <BackToTop />
     </main>
   );
 };

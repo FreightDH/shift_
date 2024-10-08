@@ -10,9 +10,9 @@ export const Arrow = () => {
   );
 };
 
-export const ArrowSmall = () => {
+export const ArrowSmall = ({ ...props }) => {
   return (
-    <div className={cl.arrow__small}>
+    <div className={cl.arrow__small} {...props}>
       <img alt="arrow-icon" src={arrowSmallIcon} />
     </div>
   );

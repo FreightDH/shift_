@@ -66,14 +66,6 @@
 }
 //---------------------------------------------------------------------------------------
 // Стили слайдера
-.splide__list {
-  justify-content: center;
-
-  @media (max-width: $mobile) {
-    display: block;
-  }
-}
-
 .splide__slide {
   display: flex;
   justify-content: center;

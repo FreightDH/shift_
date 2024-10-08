@@ -4,6 +4,7 @@ import { SolutionCooperateSection } from '@/widgets/Sections/SolutionSection';
 import { MentorsSection } from '@/widgets/Sections/MentorsSection';
 import { ServicesCooperateSection } from '@/widgets/Sections/ServicesSection';
 import { VideoSection } from '@/widgets/Sections/VideoSection';
+import { BackToTop } from '@/shared/UI/BackToTop';
 
 export const CooperatePage = () => {
   return (
@@ -14,6 +15,7 @@ export const CooperatePage = () => {
       <MentorsSection />
       <ServicesCooperateSection />
       <VideoSection />
+      <BackToTop />
     </main>
   );
 };

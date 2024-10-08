@@ -7,6 +7,7 @@ export const Slider = ({ mentorsInfo }) => {
     perMove: 3,
     gap: 30,
     speed: 1000,
+    arrows: false,
     breakpoints: {
       1280: {
         perPage: 2,
@@ -15,7 +16,6 @@ export const Slider = ({ mentorsInfo }) => {
       767.98: {
         perPage: 1,
         perMove: 1,
-        arrows: false,
       },
     },
   };
