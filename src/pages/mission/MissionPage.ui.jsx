@@ -6,7 +6,7 @@ export const MissionPage = () => {
   return (
     <div className={cl.mission}>
       <div className={cl.mission__content}>
-        <div className={cn('square', {}, ['bg__grey'])}></div>
+        <div className="rectangle bg__grey">Шифт_</div>
         <div className={cn(cl.mission__text, {}, ['bg__grey'])}>
           <p>
             Мы видим явную проблему: “Чтобы устроить на работу, нужно устроиться на работу”. Многие умные,

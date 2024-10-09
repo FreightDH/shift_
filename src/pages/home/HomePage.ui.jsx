@@ -8,7 +8,7 @@ import cl from './HomePage.module.scss';
 export const HomePage = () => {
   return (
     <div className={cl.home}>
-      <div className={cn(cl.home__square, {}, ['square', 'bg__grey'])}></div>
+      <div className="rectangle bg__grey">Шифт_</div>
       <div className={cl.home__content}>
         <p className={cn(cl.home__hello, {}, ['bg__grey'])}>
           Привет! <br />

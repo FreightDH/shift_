@@ -9,14 +9,6 @@
     flex-direction: column;
   }
 
-  &__square {
-    flex: 0 0 70px;
-
-    @media (max-width: $tablet) {
-      flex: 1 1 auto;
-    }
-  }
-
   &__content {
     display: flex;
     flex-direction: column;

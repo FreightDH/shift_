@@ -14,7 +14,7 @@ export const SolutionStudySection = () => {
           <div className={cl.message}>
             <div className={cl.message__notification}>У вас новое сообщение:</div>
             <div className={cl.message__body}>
-              <div className={cn(cl.message__from, {}, ['bg__grey'])}>Шифт_</div>
+              <div className="rectangle bg__grey">Шифт_</div>
               <div className={cn(cl.message__text, {}, ['bg__grey'])}>
                 Наш проект был создан, чтобы решить именно эту проблему
                 <span>Недавно</span>
@@ -60,7 +60,7 @@ export const SolutionCooperateSection = () => {
             <div className={cl.message}>
               <div className={cl.message__notification}>У вас новое сообщение:</div>
               <div className={cl.message__body}>
-                <div className={cn(cl.message__from, {}, ['bg__grey'])}>Шифт_</div>
+                <div className="rectangle bg__grey">Шифт_</div>
                 <div className={cn(cl.message__text, {}, ['bg__grey'])}>
                   Наш проект был создан, чтобы решить именно эту проблему
                   <span>Недавно</span>

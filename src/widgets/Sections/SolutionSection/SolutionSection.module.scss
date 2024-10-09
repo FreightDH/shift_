@@ -90,11 +90,6 @@
     }
   }
 
-  &__from {
-    padding: 20px;
-    @include adaptiveValue('padding', 20, 15);
-  }
-
   &__text {
     max-width: 450px;
     padding: 30px 30px 20px;

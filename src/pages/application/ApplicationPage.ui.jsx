@@ -32,7 +32,7 @@ export const ApplicationPage = () => {
 
   return (
     <div className={cl.application}>
-      <div className={cn(cl.application__square, {}, ['square', 'bg__grey'])}></div>
+      <div className="rectangle bg__grey">Шифт_</div>
       <div className={cl.application__titles}>
         <h1 className={cl.application__title}>Подача заявления</h1>
         <h2 className={cl.application__subtitle}>

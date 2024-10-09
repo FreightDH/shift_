@@ -60,13 +60,13 @@
     -2px -2px 10px rgba($color: #fff, $alpha: 0.1) inset;
 }
 
-.square {
-  width: 70px;
-  height: 70px;
-  @include adaptiveValue('width', 70, 50);
-  @include adaptiveValue('height', 70, 50);
+.rectangle {
+  align-self: start;
+  padding: 20px;
+  @include adaptiveValue('padding', 20, 15);
 
-  @include adaptiveValue('border-radius', 20, 15);
+  font-size: 22px;
+  @include adaptiveValue('font-size', 22, 18);
 }
 //---------------------------------------------------------------------------------------
 // Стили слайдера
