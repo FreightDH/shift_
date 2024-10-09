@@ -168,7 +168,10 @@ export const StepsSection = () => {
           </div>
           <div className={cl.steps__scroll}>
             <div className={cl.scroll__slider}>
-              <div className={cl.scroll__progress} style={{ top: `${scrollTop - 3400}px` }}></div>
+              <div
+                className={cl.scroll__progress}
+                style={{ top: `${scrollTop - 3400 > 0 && scrollTop - 3400}px` }}
+              ></div>
             </div>
             <div className={cl.scroll__items}>
               {stepsInfo.map(({ id, text, img }) => (
