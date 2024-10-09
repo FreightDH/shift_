@@ -1,15 +1,12 @@
-import { forwardRef } from 'react';
-
-import { cn } from '@/shared/lib';
 import { CourseCard } from '@/shared/UI/CourseCard';
 import { Arrow } from '@/shared/UI/Arrow';
 
 import { coursesInfo } from './coursesInfo';
 import cl from './CoursesSection.module.scss';
 
-export const CoursesSection = forwardRef((_, ref) => {
+export const CoursesSection = () => {
   return (
-    <section ref={ref} className={cn(cl.courses, {}, ['animation'])}>
+    <section className={cl.courses}>
       <div className="courses__container">
         <div className={cl.courses__body}>
           <div className={cl.courses__header}>
@@ -35,4 +32,4 @@ export const CoursesSection = forwardRef((_, ref) => {
       </div>
     </section>
   );
-});
+};

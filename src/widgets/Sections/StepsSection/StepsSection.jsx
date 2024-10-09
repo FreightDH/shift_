@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { cn } from '@/shared/lib';
@@ -18,12 +18,24 @@ import { stepsInfo } from './stepsInfo';
 import cl from './StepsSection.module.scss';
 
 export const StepsSection = () => {
-  const [scrollHeight, setScrollHeight] = useState(0);
+  const [scrollTop, setScrollTop] = useState(0);
+
+  const handleScroll = () => {
+    if (window.scrollY < 3400) {
+      setScrollTop(3400);
+      return;
+    }
+
+    if (window.scrollY > 6393) {
+      setScrollTop(6393);
+      return;
+    }
+
+    setScrollTop(window.scrollY);
+  };
 
   useEffect(() => {
-    const handleScroll = () => setScrollHeight(window.scrollY);
     window.addEventListener('scroll', handleScroll);
-
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -156,7 +168,7 @@ export const StepsSection = () => {
           </div>
           <div className={cl.steps__scroll}>
             <div className={cl.scroll__slider}>
-              <div className={cl.scroll__progress} style={{ height: `${scrollHeight - 3600}px` }}></div>
+              <div className={cl.scroll__progress} style={{ top: `${scrollTop - 3400}px` }}></div>
             </div>
             <div className={cl.scroll__items}>
               {stepsInfo.map(({ id, text, img }) => (
