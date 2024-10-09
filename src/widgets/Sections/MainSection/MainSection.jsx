@@ -11,7 +11,7 @@ export const MainStudySection = () => {
     <section className={cl.main}>
       <div className={cn(cl.main__blur, {}, ['blur', 'blur--blue'])}></div>
       <div className={cn(cl.main__blur, {}, ['blur', 'blur--blue'])}></div>
-      <div className="main__container" style={{ position: 'relative', zIndex: 2 }}>
+      <div className="main__container">
         <div className={cl.main__body}>
           <StudyBadge />
           <div className={cl.main__titles}>
@@ -35,7 +35,7 @@ export const MainCooperateSection = () => {
     <section className={cl.main}>
       <div className={cn(cl.main__blur, {}, ['blur', 'blur--blue'])}></div>
       <div className={cn(cl.main__blur, {}, ['blur', 'blur--blue'])}></div>
-      <div className="main__container" style={{ position: 'relative', zIndex: 2 }}>
+      <div className="main__container">
         <div className={cl.main__body}>
           <CooperateBadge />
           <div className={cl.main__titles}>

@@ -8,7 +8,7 @@ export const VideoSection = ({ withArrow }) => {
     <section className={cl.video}>
       <div className={cn(cl.video__blur, {}, ['blur', 'blur--blue'])}></div>
       <div className={cn(cl.video__blur, {}, ['blur', 'blur--blue'])}></div>
-      <div className="video__container" style={{ position: 'relative', zIndex: 2 }}>
+      <div className="video__container">
         <div className={cl.video__body}>
           <div className={cl.video__content}>
             <h3 className={cl.video__title}>Еще не до конца уверены?</h3>

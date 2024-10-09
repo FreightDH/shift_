@@ -3,11 +3,12 @@ import { Arrow } from '@/shared/UI/Arrow';
 
 import { coursesInfo } from './coursesInfo';
 import cl from './CoursesSection.module.scss';
+import { cn } from '@/shared/lib';
 
 export const CoursesSection = () => {
   return (
-    <section className={cl.courses}>
-      <div className="courses__container" style={{ position: 'relative', zIndex: 2 }}>
+    <section className={cn(cl.courses, {}, [''])}>
+      <div className="courses__container">
         <div className={cl.courses__body}>
           <div className={cl.courses__header}>
             <h3 className={cl.courses__title}>Выбери, что по душе</h3>

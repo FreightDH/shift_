@@ -1,6 +1,9 @@
 // Общие стили
 .blur {
   position: absolute;
+  z-index: 10;
+  pointer-events: none;
+
   width: 350px;
   height: 350px;
   @include adaptiveValue('width', 350, 250);
@@ -10,6 +13,7 @@
 
   border-radius: 32px;
   filter: blur(600px);
+  will-change: filter;
 
   @media (max-width: $mobileSmall) {
     filter: blur(300px);
@@ -27,7 +31,7 @@
     background-color: #4aff2d;
 
     @media (max-width: $mobile) {
-      opacity: 0.8;
+      opacity: 0.7;
     }
   }
 

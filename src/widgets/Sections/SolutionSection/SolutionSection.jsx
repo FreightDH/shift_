@@ -9,7 +9,7 @@ export const SolutionStudySection = () => {
   return (
     <section className={cl.solution}>
       <div className={cn(cl.solution__blur, {}, ['blur', 'blur--green'])}></div>
-      <div className="solution__container" style={{ position: 'relative', zIndex: 2 }}>
+      <div className="solution__container">
         <div className={cl.solution__body}>
           <div className={cl.message}>
             <div className={cl.message__notification}>У вас новое сообщение:</div>
@@ -54,7 +54,7 @@ export const SolutionCooperateSection = () => {
   return (
     <section className={cl.solution}>
       <div className={cn(cl.solution__blur, {}, ['blur', 'blur--green'])}></div>
-      <div className="solution__container" style={{ position: 'relative', zIndex: 2 }}>
+      <div className="solution__container">
         <div className={cl.solution__body}>
           <div className={cl.solution__header}>
             <div className={cl.message}>
