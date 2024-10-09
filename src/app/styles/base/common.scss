@@ -69,6 +69,18 @@
   @include adaptiveValue('font-size', 22, 18);
 }
 //---------------------------------------------------------------------------------------
+// Анимация появления блоков
+.animation {
+  opacity: 0;
+  transform: translateY(20px);
+
+  &.show {
+    opacity: 1;
+    transition: all 1.5s;
+    transform: translateY(0%);
+  }
+}
+//---------------------------------------------------------------------------------------
 // Стили слайдера
 .splide__slide {
   display: flex;
