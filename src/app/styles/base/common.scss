@@ -13,9 +13,11 @@
 
   border-radius: 32px;
   filter: blur(600px);
+  -webkit-filter: blur(600px);
   will-change: filter;
 
   @media (max-width: $mobileSmall) {
+    -webkit-filter: blur(300px);
     filter: blur(300px);
   }
 

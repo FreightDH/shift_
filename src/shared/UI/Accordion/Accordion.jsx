@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 
 import { cn } from '@/shared/lib';
 
-import arrowIcon from './assets/arrow.svg';
+import arrowIcon from './assets/arrow-down.svg';
 import cl from './Accordion.module.scss';
 
 const AccordionItem = ({ item }) => {

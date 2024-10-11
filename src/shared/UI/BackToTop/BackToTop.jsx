@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import arrowIcon from './assets/arrow.svg';
+import arrowIcon from './assets/arrow-up.svg';
 import cl from './BackToTop.module.scss';
 
 export const BackToTop = () => {

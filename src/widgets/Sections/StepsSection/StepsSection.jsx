@@ -40,9 +40,10 @@ export const StepsSection = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+  //  data-aos="zoom-in"
 
   return (
-    <section className={cl.steps} data-aos="zoom-in">
+    <section className={cl.steps}>
       <div className="steps__container">
         <div className={cl.steps__body}>
           <div className={cl.steps__cards}>
@@ -175,9 +176,9 @@ export const StepsSection = () => {
             </div>
             <div
               className={cl.scroll__wrapper}
-              style={{ top: `${scrollTop - 3400 > 0 && scrollTop - 3400}px` }}
+              style={{ top: `${scrollTop - 3600 > 0 && scrollTop - 3600}px` }}
             >
-              <div className={cl.scroll__items} style={{ transform: `translateY(-${scrollTop - 3500}px)` }}>
+              <div className={cl.scroll__items} style={{ transform: `translateY(-${scrollTop - 3700}px)` }}>
                 {stepsInfo.map(({ id, text, img }) => (
                   <div key={id} className={cl.step}>
                     <div className={cl.step__text}>{text}</div>
