@@ -1,5 +1,3 @@
-import { forwardRef } from 'react';
-
 import { cn } from '@/shared/lib';
 import { ArrowSmall } from '@/shared/UI/Arrow';
 import { StudyDirections } from '@/shared/UI/StudyDirections';
@@ -7,9 +5,9 @@ import { StudyDirections } from '@/shared/UI/StudyDirections';
 import { codingImg, markupIcon } from './assets';
 import cl from './SolutionSection.module.scss';
 
-export const SolutionStudySection = forwardRef((_, ref) => {
+export const SolutionStudySection = () => {
   return (
-    <section ref={ref} className={cn(cl.solution, {}, ['animation'])}>
+    <section className={cl.solution} data-aos="zoom-in">
       <div className={cn(cl.solution__blur, {}, ['blur', 'blur--green'])}></div>
       <div className="solution__container">
         <div className={cl.solution__body}>
@@ -50,11 +48,11 @@ export const SolutionStudySection = forwardRef((_, ref) => {
       </div>
     </section>
   );
-});
+};
 
-export const SolutionCooperateSection = forwardRef((_, ref) => {
+export const SolutionCooperateSection = () => {
   return (
-    <section ref={ref} className={cn(cl.solution, {}, ['animation'])}>
+    <section className={cl.solution} data-aos="zoom-in">
       <div className={cn(cl.solution__blur, {}, ['blur', 'blur--green'])}></div>
       <div className="solution__container">
         <div className={cl.solution__body}>
@@ -98,4 +96,4 @@ export const SolutionCooperateSection = forwardRef((_, ref) => {
       </div>
     </section>
   );
-});
+};

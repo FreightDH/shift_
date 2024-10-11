@@ -1,4 +1,7 @@
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import { MainStudySection } from '@/widgets/Sections/MainSection';
 import { CoursesSection } from '@/widgets/Sections/CoursesSection';
@@ -13,37 +16,24 @@ import { QuestionsSection } from '@/widgets/Sections/QuestionsSection';
 import { BackToTop } from '@/shared/UI/BackToTop';
 
 export const StudyPage = () => {
-  const elementsRef = useRef([]);
-
   useEffect(() => {
-    const onEntry = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(onEntry, {
-      threshold: [0.5],
+    AOS.init({
+      duration: 1200,
     });
-
-    const elements = elementsRef.current;
-    elements.forEach((item) => observer.observe(item));
   }, []);
 
   return (
     <main>
       <MainStudySection />
-      <CoursesSection ref={(el) => elementsRef.current.push(el)} />
-      <RelevanceStudySection ref={(el) => elementsRef.current.push(el)} />
-      <SolutionStudySection ref={(el) => elementsRef.current.push(el)} />
+      <CoursesSection />
+      <RelevanceStudySection />
+      <SolutionStudySection />
       <StepsSection />
-      <MentorsSection ref={(el) => elementsRef.current.push(el)} />
-      <CompetitorSection ref={(el) => elementsRef.current.push(el)} />
-      <VideoSection ref={(el) => elementsRef.current.push(el)} withArrow />
-      <ServicesStudySection ref={(el) => elementsRef.current.push(el)} />
-      <QuestionsSection ref={(el) => elementsRef.current.push(el)} />
+      <MentorsSection />
+      <CompetitorSection />
+      <VideoSection withArrow />
+      <ServicesStudySection />
+      <QuestionsSection />
       <BackToTop />
     </main>
   );

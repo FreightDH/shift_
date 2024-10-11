@@ -1,13 +1,10 @@
-import { forwardRef } from 'react';
-
-import { cn } from '@/shared/lib';
 import { Arrow } from '@/shared/UI/Arrow';
 
 import cl from './CompetitorSection.module.scss';
 
-export const CompetitorSection = forwardRef((_, ref) => {
+export const CompetitorSection = () => {
   return (
-    <section ref={ref} className={cn(cl.competitor, {}, ['animation'])}>
+    <section className={cl.competitor} data-aos="zoom-in">
       <div className="competitor__container">
         <div className={cl.competitor__body}>
           <p className={cl.competitor__text}>
@@ -23,4 +20,4 @@ export const CompetitorSection = forwardRef((_, ref) => {
       </div>
     </section>
   );
-});
+};

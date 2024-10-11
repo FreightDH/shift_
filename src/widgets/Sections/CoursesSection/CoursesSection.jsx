@@ -6,7 +6,7 @@ import cl from './CoursesSection.module.scss';
 
 export const CoursesSection = () => {
   return (
-    <section className={cl.courses}>
+    <section className={cl.courses} data-aos="zoom-in">
       <div className="courses__container">
         <div className={cl.courses__body}>
           <div className={cl.courses__header}>

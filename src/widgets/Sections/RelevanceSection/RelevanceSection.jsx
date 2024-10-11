@@ -1,14 +1,12 @@
-import { forwardRef } from 'react';
-
 import { cn } from '@/shared/lib';
 import { Arrow } from '@/shared/UI/Arrow';
 
 import { dislikeIcon, fireImg } from './assets';
 import cl from './RelevanceSection.module.scss';
 
-export const RelevanceStudySection = forwardRef((_, ref) => {
+export const RelevanceStudySection = () => {
   return (
-    <section ref={ref} className={cn(cl.relevance, {}, ['animation'])}>
+    <section className={cl.relevance} data-aos="zoom-in">
       <div className={cn(cl.relevance__blur, {}, ['blur', 'blur--red'])}></div>
       <div className={cn(cl.relevance__blur, {}, ['blur', 'blur--red'])}></div>
       <div className="relevance__container">
@@ -54,11 +52,11 @@ export const RelevanceStudySection = forwardRef((_, ref) => {
       </div>
     </section>
   );
-});
+};
 
-export const RelevanceCooperateSection = forwardRef((_, ref) => {
+export const RelevanceCooperateSection = () => {
   return (
-    <section ref={ref} className={cn(cl.relevance, {}, ['animation'])}>
+    <section className={cl.relevance} data-aos="zoom-in">
       <div className={cn(cl.relevance__blur, {}, ['blur', 'blur--red'])}></div>
       <div className={cn(cl.relevance__blur, {}, ['blur', 'blur--red'])}></div>
       <div className="relevance__container">
@@ -101,4 +99,4 @@ export const RelevanceCooperateSection = forwardRef((_, ref) => {
       </div>
     </section>
   );
-});
+};

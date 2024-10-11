@@ -72,12 +72,12 @@
 // Анимация появления блоков
 .animation {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(-50px);
 
   &.show {
     opacity: 1;
     transition: all 1.5s;
-    transform: translateY(0%);
+    transform: translateY(0);
   }
 }
 //---------------------------------------------------------------------------------------

@@ -1,4 +1,3 @@
-import { forwardRef } from 'react';
 import { Link } from 'react-router-dom';
 
 import { cn } from '@/shared/lib';
@@ -8,9 +7,9 @@ import { ServiceAdvancedCard, ServiceStandardCard } from '@/shared/UI/ServiceCar
 
 import cl from './ServicesSection.module.scss';
 
-export const ServicesStudySection = forwardRef((_, ref) => {
+export const ServicesStudySection = () => {
   return (
-    <section ref={ref} className={cn(cl.services, {}, ['animation'])}>
+    <section className={cl.services} data-aos="zoom-in">
       <div className="services__container">
         <div className={cl.services__body}>
           <h3 className={cl.services__title}>Пакеты услуг</h3>
@@ -41,11 +40,11 @@ export const ServicesStudySection = forwardRef((_, ref) => {
       </div>
     </section>
   );
-});
+};
 
-export const ServicesCooperateSection = forwardRef((_, ref) => {
+export const ServicesCooperateSection = () => {
   return (
-    <section ref={ref} className={cn(cl.services, {}, ['animation'])}>
+    <section className={cl.services} data-aos="zoom-in">
       <div className="services__container">
         <div className={cl.services__body}>
           <h3 className={cl.services__title}>Пакеты услуг</h3>
@@ -89,4 +88,4 @@ export const ServicesCooperateSection = forwardRef((_, ref) => {
       </div>
     </section>
   );
-});
+};

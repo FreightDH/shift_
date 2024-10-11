@@ -1,13 +1,11 @@
-import { forwardRef } from 'react';
-
 import { cn } from '@/shared/lib';
 import { ArrowSmall } from '@/shared/UI/Arrow';
 
 import cl from './VideoSection.module.scss';
 
-export const VideoSection = forwardRef(({ withArrow }, ref) => {
+export const VideoSection = ({ withArrow }) => {
   return (
-    <section ref={ref} className={cn(cl.video, {}, ['animation'])}>
+    <section className={cl.video} data-aos="zoom-in">
       <div className={cn(cl.video__blur, {}, ['blur', 'blur--blue'])}></div>
       <div className={cn(cl.video__blur, {}, ['blur', 'blur--blue'])}></div>
       <div className="video__container">
@@ -29,4 +27,4 @@ export const VideoSection = forwardRef(({ withArrow }, ref) => {
       </div>
     </section>
   );
-});
+};

@@ -42,7 +42,7 @@ export const StepsSection = () => {
   }, []);
 
   return (
-    <section className={cl.steps}>
+    <section className={cl.steps} data-aos="zoom-in">
       <div className="steps__container">
         <div className={cl.steps__body}>
           <div className={cl.steps__cards}>
@@ -173,15 +173,20 @@ export const StepsSection = () => {
                 style={{ top: `${scrollTop - 3400 > 0 && scrollTop - 3400}px` }}
               ></div>
             </div>
-            <div className={cl.scroll__items}>
-              {stepsInfo.map(({ id, text, img }) => (
-                <div key={id} className={cl.step}>
-                  <div className={cl.step__text}>{text}</div>
-                  <div className={cl.step__img}>
-                    <img alt="step-image" src={img} />
+            <div
+              className={cl.scroll__wrapper}
+              style={{ top: `${scrollTop - 3400 > 0 && scrollTop - 3400}px` }}
+            >
+              <div className={cl.scroll__items} style={{ transform: `translateY(-${scrollTop - 3500}px)` }}>
+                {stepsInfo.map(({ id, text, img }) => (
+                  <div key={id} className={cl.step}>
+                    <div className={cl.step__text}>{text}</div>
+                    <div className={cl.step__img}>
+                      <img alt="step-image" src={img} />
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
