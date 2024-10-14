@@ -21,13 +21,13 @@ export const StepsSection = () => {
   const [scrollTop, setScrollTop] = useState(0);
 
   const handleScroll = () => {
-    if (window.scrollY < 3400) {
-      setScrollTop(3400);
+    if (window.scrollY < 3200) {
+      setScrollTop(3200);
       return;
     }
 
-    if (window.scrollY > 6393) {
-      setScrollTop(6393);
+    if (window.scrollY > 6147) {
+      setScrollTop(6147);
       return;
     }
 
@@ -171,7 +171,7 @@ export const StepsSection = () => {
             <div className={cl.scroll__slider}>
               <div
                 className={cl.scroll__progress}
-                style={{ top: `${scrollTop - 3400 > 0 && scrollTop - 3400}px` }}
+                style={{ top: `${scrollTop - 3200 > 0 && scrollTop - 3200}px` }}
               ></div>
             </div>
             <div
