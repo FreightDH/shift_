@@ -1,0 +1,118 @@
+// Общие стили
+.blur {
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
+
+  width: 350px;
+  height: 350px;
+  @include adaptiveValue('width', 350, 250);
+  @include adaptiveValue('height', 350, 250);
+
+  opacity: 0.45;
+
+  border-radius: 32px;
+  filter: blur(600px);
+  -webkit-filter: blur(600px);
+  will-change: filter;
+
+  @media (max-width: $mobileSmall) {
+    -webkit-filter: blur(300px);
+    filter: blur(300px);
+  }
+
+  &.blur--red {
+    background-color: #db2777;
+
+    @media (max-width: $mobileSmall) {
+      opacity: 0.8;
+    }
+  }
+
+  &.blur--green {
+    background-color: #4aff2d;
+
+    @media (max-width: $mobile) {
+      opacity: 0.7;
+    }
+  }
+
+  &.blur--blue {
+    background-color: #2d35ff;
+
+    @media (max-width: $mobileSmall) {
+      opacity: 0.6;
+    }
+  }
+
+  &.blur--orange {
+    background-color: #eb800c;
+
+    @media (max-width: $mobileSmall) {
+      opacity: 0.6;
+    }
+  }
+}
+
+.bg__grey {
+  border-radius: 15px;
+  background-color: #24272c;
+  box-shadow:
+    6px 6px 12px rgba(0, 0, 0, 0.25) inset,
+    -2px -2px 10px rgba($color: #fff, $alpha: 0.1) inset;
+}
+
+.rectangle {
+  align-self: start;
+  padding: 20px;
+  @include adaptiveValue('padding', 20, 15);
+
+  font-size: 22px;
+  @include adaptiveValue('font-size', 22, 18);
+}
+//---------------------------------------------------------------------------------------
+// Анимация появления блоков
+.animation {
+  opacity: 0;
+  transform: translateY(-50px);
+
+  &.show {
+    opacity: 1;
+    transition: all 1.5s;
+    transform: translateY(0);
+  }
+}
+//---------------------------------------------------------------------------------------
+// Стили слайдера
+.splide__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: $mobile) {
+    width: 100% !important;
+  }
+}
+
+.splide__arrow--prev {
+  left: -3em;
+}
+.splide__arrow--next {
+  right: -3em;
+}
+.splide__arrow:disabled {
+  cursor: default;
+}
+
+.splide__pagination {
+  bottom: -2.5em;
+}
+.splide__pagination__page {
+  background: #c3c3ff;
+  width: 10px;
+  height: 10px;
+}
+.splide__pagination__page.is-active {
+  background: #5f2eea;
+  transform: scale(1.5);
+}

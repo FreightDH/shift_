@@ -1,0 +1,19 @@
+@import '@/app/styles/base/mixins';
+
+.mentors {
+  padding: 50px 0px 0px 0px;
+  @include adaptiveValue('padding-top', 50, 15);
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    @include adaptiveValue('gap', 30, 15);
+  }
+
+  &__title {
+    font-size: 35px;
+    @include adaptiveValue('font-size', 35, 25);
+  }
+}

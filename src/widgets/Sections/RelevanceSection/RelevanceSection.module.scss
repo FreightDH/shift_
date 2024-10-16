@@ -1,0 +1,138 @@
+@import '@/app/styles/base/mixins';
+
+.relevance {
+  padding: 50px 0px 0px 0px;
+  @include adaptiveValue('padding-top', 50, 25);
+  position: relative;
+
+  &__blur {
+    bottom: 30%;
+    left: 0;
+
+    &:nth-child(2) {
+      top: 0;
+      left: auto;
+      right: 0;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__content {
+    margin: 0px 0px 30px 0px;
+    @include adaptiveValue('margin-bottom', 30, 0);
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+
+    @media (max-width: $mobile) {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  @include adaptiveValue('gap', 20, 10);
+
+  @media (max-width: $mobileSmall) {
+    align-items: start;
+  }
+
+  &__image {
+    flex: 0 0 180px;
+    height: 180px;
+    @include adaptiveValue('flex-basis', 180, 70);
+    @include adaptiveValue('height', 180, 70);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    max-width: 1100px;
+    color: #ff8686;
+    font-size: 26px;
+    @include adaptiveValue('font-size', 26, 18);
+    font-weight: 300;
+
+    span {
+      font-weight: 700;
+    }
+  }
+}
+
+.count {
+  flex: 0 0 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 70px;
+  @include adaptiveValue('gap', 70, 40);
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    span {
+      font-size: 60px;
+      @include adaptiveValue('font-size', 60, 40);
+      font-weight: 700;
+    }
+
+    p {
+      max-width: 150px;
+      @include adaptiveValue('font-size', 16, 14);
+    }
+  }
+}
+
+.problem {
+  max-width: 350px;
+  padding: 40px 20px;
+  @include adaptiveValue('padding-top', 40, 25);
+  @include adaptiveValue('padding-bottom', 40, 25);
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  @include adaptiveValue('gap', 25, 15);
+
+  background-color: #24272c;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25) inset;
+  border-radius: 24px;
+
+  &__item {
+    display: flex;
+    gap: 15px;
+    @include adaptiveValue('font-size', 16, 14);
+
+    img {
+      width: 30px;
+      height: 30px;
+      @include adaptiveValue('width', 30, 20);
+      @include adaptiveValue('height', 30, 20);
+      object-fit: cover;
+    }
+
+    span {
+      font-weight: 700;
+    }
+  }
+}

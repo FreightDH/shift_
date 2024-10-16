@@ -1,0 +1,53 @@
+@import '@/app/styles/base/mixins';
+
+.directions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+
+  &__body {
+    max-width: 200px;
+    padding: 15px 25px;
+    @include adaptiveValue('padding-top', 15, 10);
+    @include adaptiveValue('padding-bottom', 15, 10);
+    @include adaptiveValue('padding-right', 25, 15);
+    @include adaptiveValue('padding-left', 25, 15);
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  &__img {
+    position: absolute;
+    width: 150px;
+    @include adaptiveValue('width', 150, 100);
+    top: -50px;
+    right: -50px;
+    @include adaptiveValue('right', -50, -25);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__plans {
+    color: #9d9595;
+  }
+}

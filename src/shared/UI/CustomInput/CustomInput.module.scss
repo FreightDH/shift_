@@ -1,0 +1,21 @@
+@import '@/app/styles/base/mixins';
+
+.input {
+  display: block;
+  width: 600px;
+  @include adaptiveValue('width', 600, 290);
+  height: 45px;
+  padding: 0px 15px;
+
+  font-size: 20px;
+  @include adaptiveValue('font-size', 20, 18);
+
+  border-radius: 0 !important;
+
+  &:focus {
+    &::placeholder {
+      color: transparent;
+      transition: all 0.2s ease 0s;
+    }
+  }
+}

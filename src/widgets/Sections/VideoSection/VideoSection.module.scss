@@ -1,0 +1,60 @@
+@import '@/app/styles/base/mixins';
+
+.video {
+  padding: 50px 0px;
+  @include adaptiveValue('padding-top', 50, 25);
+  @include adaptiveValue('padding-bottom', 50, 0);
+
+  position: relative;
+
+  &__blur {
+    top: -20%;
+    opacity: 1 !important;
+
+    &:nth-child(2) {
+      top: auto;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    @include adaptiveValue('gap', 50, 15);
+  }
+
+  &__content {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    @include adaptiveValue('gap', 15, 10);
+  }
+
+  &__title {
+    font-size: 50px;
+    @include adaptiveValue('font-size', 50, 30);
+    font-weight: 700;
+  }
+
+  &__text {
+    color: #7f7f7f;
+    font-size: 25px;
+    @include adaptiveValue('font-size', 25, 16);
+  }
+
+  &__player {
+    margin: 50px 0px 0px 0px;
+    @include adaptiveValue('margin-top', 50, 20);
+    width: 100%;
+    height: 700px;
+    @include adaptiveValue('height', 700, 350);
+
+    border-radius: 30px;
+  }
+}

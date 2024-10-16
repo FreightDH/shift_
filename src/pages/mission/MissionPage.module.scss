@@ -1,0 +1,51 @@
+@import '@/app/styles/base/mixins';
+
+.mission {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    @include adaptiveValue('gap', 50, 25);
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__text {
+    padding: 40px 20px 40px 70px;
+    @include adaptiveValue('padding-top', 40, 20);
+    @include adaptiveValue('padding-bottom', 40, 20);
+    @include adaptiveValue('padding-right', 20, 10);
+    @include adaptiveValue('padding-left', 70, 25);
+    max-width: 1300px;
+    @include adaptiveValue('max-width', 1300, 290);
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    font-size: 20px;
+    @include adaptiveValue('font-size', 20, 15);
+
+    @media (max-width: $tablet) {
+      max-width: 100%;
+    }
+  }
+
+  &__author {
+    align-self: end;
+    padding: 25px;
+    @include adaptiveValue('padding-top', 25, 20);
+    @include adaptiveValue('padding-bottom', 25, 20);
+    @include adaptiveValue('padding-right', 25, 20);
+    @include adaptiveValue('padding-left', 25, 20);
+
+    font-size: 20px;
+    @include adaptiveValue('font-size', 20, 15);
+  }
+}
